@@ -1,0 +1,4 @@
+npm start
+
+
+npx nodemon server.js

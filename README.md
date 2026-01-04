@@ -63,3 +63,137 @@ The system features a simple **single-page frontend** and an **Express.js backen
 ### 1️⃣ Install Dependencies
 ```bash
 npm install
+2️⃣ Configure Environment Variables
+
+Create a .env file in the project root:
+
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+YOUTUBE_API_KEY=your_youtube_api_key_here
+PORT=3000
+3️⃣ Start the Server
+npm start
+
+4️⃣ Open in Browser
+http://localhost:3000
+
+🧭 API Endpoints
+
+All API endpoints are prefixed with /api.
+
+🔹 POST /api/career-predictions
+
+Request Body
+
+{
+  "name": "Alice",
+  "education": "B.Sc. Computer Science",
+  "skills": ["javascript", "machine learning"],
+  "interests": ["data", "ai"]
+}
+
+
+Response
+
+{
+  "prediction": "AI-generated career guidance..."
+}
+
+🔹 POST /api/course-recommendations
+
+Request Body
+
+{
+  "skills": ["python", "data analysis"],
+  "interests": ["data science", "visualization"]
+}
+
+
+Response
+
+{
+  "recommendations": "AI-generated course suggestions..."
+}
+
+🔹 GET /api/youtube-videos
+
+Query Example
+
+/api/youtube-videos?query=machine+learning+basics
+
+
+Response
+
+Returns up to 5 relevant YouTube videos
+
+🔍 Debugging & Troubleshooting
+
+Environment variables are logged at server startup
+
+If API calls fail:
+
+Check API key validity
+
+Confirm .env file exists
+
+Verify internet connectivity
+
+Common error:
+
+Failed to fetch ...
+
+
+➡ Usually caused by missing or invalid API keys.
+
+♻️ Deployment Notes
+
+Set environment variables on your hosting provider
+
+Use a process manager like:
+
+PM2
+
+Docker
+
+❌ Avoid using nodemon in production
+
+🤝 Contributing
+
+Contributions are welcome!
+
+Fork the repository
+
+Create a new branch
+
+Commit your changes
+
+Open a pull request with a clear description
+
+📄 License
+
+This project is licensed under the ISC License
+See package.json for details.
+
+💡 Optional Enhancements
+
+You can extend this project with:
+
+cURL examples
+
+Postman collection
+
+Automated API tests
+
+Improved frontend UI
+
+Docker configuration
+
+Feel free to contribute or suggest improvements 🚀
+
+
+If you want, I can also:
+- Add **badges** (Node version, license, API)
+- Create a **clean folder structure section**
+- Optimize it for **GitHub stars & recruiters**
+- Write a **project description for resumes**
+
+Just say the word 👍
